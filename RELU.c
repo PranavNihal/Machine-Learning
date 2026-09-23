@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "matrix.h"
+
 int *RELU(const int *array, int cols, int rows)
 {
     if (array == NULL || rows <= 0 || cols <= 0)

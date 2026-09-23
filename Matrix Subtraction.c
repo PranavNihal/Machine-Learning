@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "matrix.h"
 int *matrix_sub(const int *A, int rows_A, int cols_A, const int *B, int rows_B, int cols_B)
 {
     if (A == NULL || B == NULL || rows_A != rows_B || cols_A != cols_B)

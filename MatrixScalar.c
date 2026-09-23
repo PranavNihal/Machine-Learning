@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "matrix.h"
+
 int *matrix_scalar(const int *array, int rows, int cols, int scalar)
 {
     if (array == NULL || rows <= 0 || cols <= 0)

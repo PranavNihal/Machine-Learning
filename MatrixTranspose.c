@@ -1,5 +1,7 @@
 #include <stdio.h>
-int *matrix_transpose(int rows, int cols, const int *Array)
+#include "matrix.h"
+
+int *matrix_transpose(const int *Array, int rows, int cols)
 {
     if (Array == NULL || rows <= 0 || cols <= 0)
     {
