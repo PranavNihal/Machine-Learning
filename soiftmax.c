@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "matrix.h"
+// we use
 #include <math.h>
 
 float *softmax(const int *array, int rows, int cols)
@@ -14,6 +15,10 @@ float *softmax(const int *array, int rows, int cols)
     {
         return NULL;
     }
+    /*
+    row wise calculations
+    implementation of the softmax function.
+    */
     for (int i = 0; i < rows; i++)
     {
         float sum = 0.0f;
