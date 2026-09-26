@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "matrix.h"
 
-int *RELU(const int *array, int cols, int rows)
+int *RELU(const int *array, int rows, int cols)
 {
     if (array == NULL || rows <= 0 || cols <= 0)
     {
