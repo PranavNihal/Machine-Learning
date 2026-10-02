@@ -20,7 +20,7 @@
  * and paramater dX is the adjustment for the inputs that have entered this layer. M, K and N are the necessary 
  * details needed, the implementation behind these paramters will be added later on.
  */
-int bachward(const float *X, const float *W, const float *d_out, float *dW, float *dB, float *dX, int M, int K, int N)
+int backward(const float *X, const float *W, const float *d_out, float *dW, float *dB, float *dX, int M, int K, int N)
 {
     if (X == NULL || W == NULL || d_out == NULL || dW == NULL || dX == NULL || dB == NULL)
     {
