@@ -43,6 +43,7 @@ void dense_layer_free(DenseLayer *layer)
     if (layer->dB)
         free(layer->dB);
     if (layer->dW)
+    
         free(layer->dW);
     free(layer);
 }
