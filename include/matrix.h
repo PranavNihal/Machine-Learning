@@ -13,7 +13,11 @@ typedef struct
     float *dB;
 
 } DenseLayer;
+int *RELU(const int *array, int rows, int cols);
+int *RELU_der(const int *array, int rows, int cols);
 
+float MSE_Loss(const float *predictions, const float *targets, int size);
+float *mse_der(const float *predictions, const float *targets, int size);
 DenseLayer *dense_layer_create(int in_features, int out_features);
 void dense_layer_free(DenseLayer *layer);
 

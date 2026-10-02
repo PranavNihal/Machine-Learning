@@ -14,7 +14,7 @@ int *RELU_der(const int *array, int rows, int cols)
     {
         return NULL;
     }
-    for (int i = 0; i <= size; i++)
+    for (int i = 0; i < size; i++)
     {
         if (array[i] > 0)
         {
