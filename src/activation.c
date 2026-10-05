@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 #include "matrix.h"
-/* Different activation functions along with their backward passes.
-RELU, Softmax, Sigmoid activations*/
+/* Different activation functions along with their backward passes.[i.e their derivative]
+RELU, Softmax, Sigmoid activations, leaky RELU and stuff to be added*/
 void relu_forward(const float *in, float *out, int size)
 {
     if (in == NULL || out == NULL || size <= 0)
@@ -65,7 +65,6 @@ void softmax_forward(const float *in, float *out, int rows, int cols)
 
     for (int i = 0; i < rows; i++)
     {
-        // Finding row maximum for numerical stability
         float max_val = in[i * cols];
         for (int j = 1; j < cols; j++)
         {

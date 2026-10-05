@@ -12,6 +12,7 @@ DenseLayer *dense_layer_create(int in_features, int out_features)
     DenseLayer *layer = (DenseLayer *)malloc(sizeof(DenseLayer));
     if (layer == NULL)
     {
+        perror("malloc");
         return NULL;
     }
     layer->in_features = in_features;
@@ -38,14 +39,24 @@ void dense_layer_free(DenseLayer *layer)
         return;
     }
     if (layer->biases)
+    {
         free(layer->biases);
+    }   
+    
     if (layer->weights)
+    {
         free(layer->weights);
+    }
     if (layer->dB)
+    {
         free(layer->dB);
+    }
+    
     if (layer->dW)
-
+    {
         free(layer->dW);
+    }
+
     free(layer);
 }
 
@@ -55,6 +66,7 @@ void forward_pass(DenseLayer *layer, const float *X, float *out, int M)
     {
         return;
     }
+    
     for (int i = 0; i < M; i++)
     {
         for (int j = 0; j < layer->out_features; j++)
